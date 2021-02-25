@@ -284,6 +284,7 @@ export type Dispatcher = {|
     context: ReactContext<T>,
     observedBits: void | number | boolean,
   ): T,
+  {/*  Dispatch<BasicStateAction<S>> 指示类型可以是 */}
   useState<S>(initialState: (() => S) | S): [S, Dispatch<BasicStateAction<S>>],
   useReducer<S, I, A>(
     reducer: (S, A) => S,
